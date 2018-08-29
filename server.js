@@ -47,6 +47,11 @@ app.get('/bad', (req, res) => {
         errorMsg: 'Unable to respond'
     });
 });
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        title: 'Portfolio'
+    });
+});
 
 app.listen(port, () => {
     console.log(`Server is up on port ${port}`);
